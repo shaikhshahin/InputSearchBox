@@ -158,8 +158,12 @@ class App extends Component {
         <FlatList
           data={this.state.data}
           renderItem={({ item }) => (
-            <Text style={{ padding: 10 }}>{item.name}
-             </Text>
+            <Text style={{ padding: 10 }}>{item.id}{"\n"}
+            <Text style={{ padding: 10 }}>{item.name}{"\n"}
+            </Text>
+            <Text style ={{ padding : 10 }}>{ item.address} 
+            </Text>
+            </Text>
           )}
           keyExtractor={item => item.name}
           ItemSeparatorComponent={this.renderSeparator}
