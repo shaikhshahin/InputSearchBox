@@ -89,6 +89,10 @@ class App extends Component {
     );
   };
 
+  toggleHover() {
+    this.setState({hover: !this.state.hover})
+  }
+  
   searchItems = text => {
     let newData = this.arrayNew.filter(item => {
       const itemName = `${item.name.toUpperCase()}`;
@@ -136,6 +140,12 @@ class App extends Component {
 
 
   render() {
+    var linkStyle;
+    if (this.state.hover) {
+      linkStyle = {color: '#ed1212',cursor: 'pointer'}
+    } else {
+      linkStyle = {color: '#000'}
+    }
     return (
       <View
         style={{
