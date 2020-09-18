@@ -115,7 +115,7 @@ class App extends Component {
   renderHeader = () => {
     return (
       <TextInput
-        style={{ height: 60, borderColor: '#000', borderWidth: 1 }}
+        style={{ height: 60, borderColor: '#000', borderWidth: 1 , marginTop: 30}}
         placeholder="   Search User By Name, id, address..."
         onChangeText={text => this.searchItems(text)}
         value={this.state.value}
